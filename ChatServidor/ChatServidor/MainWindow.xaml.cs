@@ -34,10 +34,10 @@ namespace ChatServidor
             IPAddress enderecoIP = IPAddress.Parse(txtIP.Text);
 
             //Cria uma nova instância do objeto ChatServidor
-            ChatServidor mainServidor = new ChatServidor(enderecoIP);
+            Servidor mainServidor = new Servidor(enderecoIP);
 
             //Vincula o tratamento de evento StatusChanged a mainServer_StatusChanged
-            ChatServidor.StatusChanged += new StatusChangedEventHandler(mainServer_StatusChanged);
+            //Servidor.StatusChanged += new StatusChangedEventHandler(mainServer_StatusChanged); #########################ARRUMAR#########################
 
             //Inicia o atendimento das conexões
             mainServidor.IniciaAtendimento();
