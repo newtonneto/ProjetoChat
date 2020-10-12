@@ -116,9 +116,9 @@ namespace ChatCliente
                 {
                     this.Dispatcher.Invoke(new AtualizaLogCallBack(this.AtualizaLog), new object[] { strReceptor.ReadLine() });
                 }
-                catch
+                catch (Exception ex)
                 {
-
+                    throw ex;
                 }
             }
         }
