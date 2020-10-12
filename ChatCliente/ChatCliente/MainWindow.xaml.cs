@@ -112,7 +112,14 @@ namespace ChatCliente
             //Enquanto estiver conectado, le as linhas que estão chegando do servidor
             while (conectado)
             {
-                this.Dispatcher.Invoke(new AtualizaLogCallBack(this.AtualizaLog), new object[] { strReceptor.ReadLine() });
+                try
+                {
+                    this.Dispatcher.Invoke(new AtualizaLogCallBack(this.AtualizaLog), new object[] { strReceptor.ReadLine() });
+                }
+                catch
+                {
+
+                }
             }
         }
 

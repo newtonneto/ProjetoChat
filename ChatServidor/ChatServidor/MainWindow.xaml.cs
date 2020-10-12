@@ -37,7 +37,7 @@ namespace ChatServidor
             Servidor mainServidor = new Servidor(enderecoIP);
 
             //Vincula o tratamento de evento StatusChanged a mainServer_StatusChanged
-            //Servidor.StatusChanged += new StatusChangedEventHandler(mainServer_StatusChanged); #########################ARRUMAR#########################
+            Servidor.StatusChanged += new StatusChangedEventHandler(mainServidor_StatusChanged);
 
             //Inicia o atendimento das conexões
             mainServidor.IniciaAtendimento();
